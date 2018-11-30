@@ -23,4 +23,42 @@ function sf_child_theme_dequeue_style() {
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
 
+/**
+ * Registers navigation areas.
+ *
+ * @return void
+ */
+function register_navigation_areas()
+{
+    register_nav_menus([
+        'footer' => "Footer",
+    ]);
+}
+add_action('after_setup_theme', 'register_navigation_areas');
+
+/**
+ * Proper way to enqueue scripts and styles
+ */
+function register_styles_and_scrips() {
+
+    $main_css = "/dist/css/main.css";
+    wp_enqueue_style(
+        'basista',
+        get_stylesheet_directory_uri() . $main_css,
+        ["storefront-style"],
+        hash_file('md5', get_stylesheet_directory() . $main_css)
+    );
+
+    $main_js = "/dist/js/main.js";
+    wp_enqueue_script(
+        'basista',
+        get_stylesheet_directory_uri() . $main_js,
+        [],
+        hash_file('md5', get_stylesheet_directory() . $main_css),
+        true
+    );
+
+}
+add_action( 'wp_enqueue_scripts', 'register_styles_and_scrips' );
+
 

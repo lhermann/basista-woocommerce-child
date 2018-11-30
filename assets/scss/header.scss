@@ -1,0 +1,21 @@
+.secondary-navigation a:hover {
+    color: #ed747c !important;
+}
+
+.site-header {
+    border-bottom-width: 0;
+
+    .nav-menu a:hover {
+        background-color: rgba(#91171f, 0.8);
+        color: #f4e1e1 !important;
+    }
+}
+
+.site-header-cart {
+    background-color: rgba(#000, 0.2);
+
+    .cart-contents.cart-contents {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

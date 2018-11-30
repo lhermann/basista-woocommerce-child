@@ -1,0 +1,43 @@
+{
+  "name": "basista",
+  "version": "1.0.0",
+  "description": "The StoreFront Child Theme is a starter blank child theme for WooThemes StoreFront WooCommerce theme.",
+  "main": "style.scss",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.4",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.1.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "NODE_ENV=\"development\" webpack --watch",
+    "build": "NODE_ENV=\"production\" webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stuartduff/storefront-child-theme.git"
+  },
+  "author": "Lukas Hermann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stuartduff/storefront-child-theme/issues"
+  },
+  "homepage": "https://github.com/stuartduff/storefront-child-theme#readme",
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  }
+}

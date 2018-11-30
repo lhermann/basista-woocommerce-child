@@ -1,0 +1,27 @@
+.site-footer {
+    padding: 4em 0;
+}
+
+.footer-heading {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer-list {
+    margin: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+
+    li:not(:first-child)::before {
+        padding-right: 0.2em;
+        content: "\0a\b7";
+    }
+
+    a:hover,
+    a:focus {
+        border-bottom: 1px solid currentcolor;
+    }
+}
