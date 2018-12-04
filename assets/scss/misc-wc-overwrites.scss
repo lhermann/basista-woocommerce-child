@@ -1,3 +1,6 @@
+/*
+ * Fix product thumbnail ratios
+ */
 ul.products li.product img {
     height: auto !important;
     max-width: 100%;
@@ -5,6 +8,33 @@ ul.products li.product img {
     width: auto !important;
 }
 
+/*
+ * Make product titles bold
+ */
 .woocommerce-loop-product__title {
     font-weight: 600 !important;
+}
+
+
+/*
+ * Remove sidebar on single products
+ */
+.single-product #primary {
+    width: 100% !important;
+}
+
+.single-product #sidebar-primary {
+    display: none !important;
+}
+@media (min-width: 768px) {
+    .single-product div.product {
+        .woocommerce-product-gallery {
+            width: 30% !important;
+            margin-right: 4em !important;
+        }
+
+        .summary {
+            width: calc(70% - 4em) !important;
+        }
+    }
 }
