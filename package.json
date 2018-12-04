@@ -1,6 +1,6 @@
 {
   "name": "basista",
-  "version": "1.0.0",
+  "version": "1.0.0-rc1",
   "description": "The StoreFront Child Theme is a starter blank child theme for WooThemes StoreFront WooCommerce theme.",
   "main": "style.scss",
   "dependencies": {},
@@ -36,8 +36,6 @@
   },
   "homepage": "https://github.com/stuartduff/storefront-child-theme#readme",
   "babel": {
-    "presets": [
-      "@babel/env"
-    ]
+    "presets": ["@babel/env"]
   }
 }
