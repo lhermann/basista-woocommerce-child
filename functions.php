@@ -62,3 +62,11 @@ function register_styles_and_scrips() {
 add_action( 'wp_enqueue_scripts', 'register_styles_and_scrips' );
 
 
+function add_book_author($arg1) {
+    global $product;
+    $author = $product->get_attribute('pa_autor');
+    if($author) echo "<p class=\"basista-loop-product__author\">$author</p>";
+}
+
+add_action( 'woocommerce_shop_loop_item_title', 'add_book_author');
+// woocommerce_template_loop_product_title
